@@ -79,6 +79,8 @@ git -C "./data" clone https://huggingface.co/datasets/rockmiin/ml-codeparrot-val
 
 accelerate launch codeparrot/scripts/codeparrot_training.py \
 --model_ckpt rockmiin/ml-codeparrot \
+--dataset_name_train ./data/ml-codeparrot-train \
+--dataset_name_valid ./data/ml-codeparrot-valid \
 --train_batch_size 4 \
 --valid_batch_size 4 \
 --learning_rate 2e-4 \
